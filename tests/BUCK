@@ -1,0 +1,52 @@
+cxx_binary(
+  name = 'stb',
+  srcs = [
+    'stb.c',
+  ],
+  compiler_flags = [
+    '-std=c11',
+  ],
+  deps = [
+    '//:stb',
+  ],
+)
+
+cxx_binary(
+  name = 'image-test',
+  srcs = [
+    'image_test.c',
+  ],
+  compiler_flags = [
+    '-std=c11',
+  ],
+  deps = [
+    '//:stb',
+  ],
+)
+
+cxx_binary(
+  name = 'stretch-test',
+  srcs = [
+    'stretch_test.c',
+  ],
+  compiler_flags = [
+    '-std=c11',
+  ],
+  deps = [
+    '//:stb',
+  ],
+)
+
+cxx_binary(
+  name = 'test-vorbis',
+  srcs = [
+    'test_vorbis.c',
+  ],
+  compiler_flags = [
+    '-std=c11',
+    '-DVORBIS_TEST',
+  ],
+  deps = [
+    '//:stb',
+  ],
+)
